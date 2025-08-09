@@ -6,17 +6,14 @@ class ProblemSolution {
 
 // Create a function to solve the problem.
 function SolveProblem(problem: string) -> ProblemSolution {
-  // client "anthropic/claude-3-5-sonnet-20241022" // Set ANTHROPIC_API_KEY to use this client.
-  // client "anthropic/claude-sonnet-4-20250514"
-  client OllamaModel
+  client "anthropic/claude-sonnet-4-20250514"
+  // client OllamaModel
   prompt #"
     {{ problem }}
 
     {{ ctx.output_format }}
   "#
 }
-
-
 
 // Test the function with a sample problem
 test solve_problem {
